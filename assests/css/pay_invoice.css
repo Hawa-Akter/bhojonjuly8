@@ -1,0 +1,134 @@
+.invoice-card {
+  display: flex;
+  flex-direction: column;
+  padding: 25px;
+  width: 300px;
+  background-color: #fff;
+  border-radius: 5px;
+  /* box-shadow: 0px 10px 30px 15px rgb(0 0 0 / 5%); */
+  margin: 35px auto;
+}
+.invoice-head {
+  flex-direction: column;
+}
+.row-data {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  width: 100%;
+}
+.item-info {
+  max-width: 200px;
+}
+.item-title {
+  font-size: 14px;
+  margin: 0;
+  line-height: 19px;
+  font-weight: 500;
+}
+.invoice-head {
+  border-bottom: 0.5px dashed #747272;
+}
+.invoice-details {
+  border-top: 0.5px dashed #747272;
+  border-bottom: 0.5px dashed #747272;
+}
+.invoice-list {
+  width: 100%;
+  border-collapse: collapse;
+  border-bottom: 1px dashed #858080;
+}
+.invoice-card .invoice-title {
+  margin: 15px 0;
+}
+.invoice-list .heading {
+  font-size: 16px;
+  font-weight: 600;
+  margin: 0;
+}
+.invoice-list .row-data:last-child {
+  border-bottom: 0;
+  margin-bottom: 0;
+}
+.item-size,
+.item-number {
+  margin: 5px 0;
+}
+.item-size,
+.item-number {
+  margin: 5px 0;
+}
+.invoice-footer {
+  margin-top: 20px;
+}
+.middle-data {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.gap_right {
+  border-right: 1px solid #ddd;
+  padding-right: 15px;
+  margin-right: 15px;
+}
+.b_top {
+  border-top: 1px solid #ddd;
+  padding-top: 12px;
+}
+.h4,
+.h5,
+.h6,
+h4,
+h5,
+h6 {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.border-top {
+  border-top: 2px dashed #858080;
+  background: #ececec;
+}
+
+.row-data {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  width: 100%;
+}
+.mt-10 {
+  margin-top: 10px;
+}
+.text-center {
+  text-align: center;
+}
+.customer_info {
+  text-align: center;
+}
+
+.invoice-head,
+.invoice-card .invoice-title {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.invoice-data {
+  border-bottom: 0.5px dashed #747272;
+}
+.invoice_address {
+  border-top: 0.5px dashed #747272;
+}
+.invoiceFooter1 {
+  border-bottom: 0.5px dashed #747272;
+}
+.print_button {
+  height: 33px;
+  width: 70px;
+  background-color: #0b5ed7;
+}
+.printDIv {
+  text-align: center;
+}

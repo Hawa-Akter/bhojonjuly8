@@ -1,0 +1,370 @@
+<div id="adddiscount" class="">
+    <div class="row no-gutters">
+        <div class="form-group col-md-6">
+            <label for="payments" class="col-form-label pb-2">Payment Method</label>
+            <select name="paytype[]" class="card_typesl postform resizeselect form-control  select2-hidden-accessible"
+                onchange="showhidecard(this)" tabindex="-1" aria-hidden="true">
+                <option value="">Select Method</option>
+                <option value="1">Card Payment</option>
+                <option value="2">2Checkout</option>
+                <option value="3">Paypal</option>
+                <option value="4" selected="selected">Cash Payments</option>
+                <option value="5">SSL Commerz</option>
+                <option value="6">Monthly Account</option>
+                <option value="8">Square Payments</option>
+                <option value="9">Stripe Payment</option>
+                <option value="10">Paystack Payments</option>
+                <option value="11">Paytm Payments</option>
+                <option value="12">Nakit Ödeme</option>
+                <option value="17">razorpay</option>
+            </select><span class="select2 select2-container select2-container--default select2-container--below"
+                dir="ltr" style="width: 100px;"><span class="selection"><span
+                        class="select2-selection select2-selection--single" role="combobox" aria-haspopup="true"
+                        aria-expanded="false" tabindex="0" aria-labelledby="select2-paytype-yt-container"><span
+                            class="select2-selection__rendered" id="select2-paytype-yt-container"
+                            title="Card Payment"><span class="select2-selection__clear">×</span>Card Payment</span><span
+                            class="select2-selection__arrow" role="presentation"><b
+                                role="presentation"></b></span></span></span><span class="dropdown-wrapper"
+                    aria-hidden="true"></span></span>
+        </div>
+        <div class="form-group col-md-6">
+            <label for="4digit" class="col-form-label pb-2">Customer Payment</label>
+            <input type="number" id="paidamount_marge" class="form-control number pay firstpay" name="paidamount[]"
+                value="17.25" onkeyup="changedueamount()" placeholder="0" onclick="givefocus(this)">
+        </div>
+    </div>
+    <div class="row no-gutters">
+        <div class="cardarea w-100 no-gutters">
+            <div class="form-group col-md-6">
+                <label for="card_terminal" class="col-form-label">Card Terminal</label>
+                <select name="card_terminal[]" class="postform resizeselect form-control select2-hidden-accessible"
+                    tabindex="-1" aria-hidden="true">
+                    <option value="" selected="selected">Select Card Terminal</option>
+                    <option value="1">Nexus Terminal</option>
+                    <option value="2">Brac Bank Terminal</option>
+                    <option value="3">Visa-Master Terminal</option>
+                    <option value="4">master</option>
+                    <option value="5">New</option>
+                </select><span class="select2 select2-container select2-container--default" dir="ltr"
+                    style="width: 100px;"><span class="selection"><span
+                            class="select2-selection select2-selection--single" role="combobox" aria-haspopup="true"
+                            aria-expanded="false" tabindex="0"
+                            aria-labelledby="select2-card_terminal-k8-container"><span
+                                class="select2-selection__rendered" id="select2-card_terminal-k8-container"><span
+                                    class="select2-selection__placeholder">Select option</span></span><span
+                                class="select2-selection__arrow" role="presentation"><b
+                                    role="presentation"></b></span></span></span><span class="dropdown-wrapper"
+                        aria-hidden="true"></span></span>
+            </div>
+            <div class="form-group col-md-6">
+                <label for="bank" class="col-form-label">Select Bank</label>
+                <select name="bank[]" class="postform resizeselect form-control select2-hidden-accessible" tabindex="-1"
+                    aria-hidden="true">
+                    <option value="" selected="selected">Select Bank</option>
+                    <option value="1">Dutch-Bangla Bank</option>
+                    <option value="2">City Bank</option>
+                    <option value="3">Brac Bank</option>
+                    <option value="4">axis Bank</option>
+                </select><span class="select2 select2-container select2-container--default" dir="ltr"
+                    style="width: 100px;"><span class="selection"><span
+                            class="select2-selection select2-selection--single" role="combobox" aria-haspopup="true"
+                            aria-expanded="false" tabindex="0" aria-labelledby="select2-bank-dl-container"><span
+                                class="select2-selection__rendered" id="select2-bank-dl-container"><span
+                                    class="select2-selection__placeholder">Select option</span></span><span
+                                class="select2-selection__arrow" role="presentation"><b
+                                    role="presentation"></b></span></span></span><span class="dropdown-wrapper"
+                        aria-hidden="true"></span></span>
+            </div>
+            <div class="form-group col-md-6">
+                <label for="4digit" class="col-form-label">Last 4 Digit</label>
+                <input type="text" class="form-control" name="last4digit[]" value="">
+            </div>
+        </div>
+    </div>
+    <div class="row col-md-12 m-0" id="add_new_payment">
+    </div>
+    <div class="form-group text-right">
+        <div class="col-sm-12 pr-0">
+            <button type="button" id="add_new_payment_type" class="btn btn-success w-md m-b-5">Add New Payment
+                Method</button>
+        </div>
+    </div>
+</div>
+
+<div class="col-md-8 row ">
+    <div class="row no-gutters">
+        <div class="col-md-4">
+            <div class="form-group">
+                <label for="discounttt" class="col-form-label pb-2">Discount type </label>
+                <select name="discountttch" class="form-control select2-hidden-accessible" id="discountttch"
+                    onchange="changetype()" tabindex="-1" aria-hidden="true">
+                    <option value="1">Percent(%)</option>
+                    <option value="0">Amount</option>
+                </select><span class="select2 select2-container select2-container--default" dir="ltr"
+                    style="width: 100px;"><span class="selection"><span
+                            class="select2-selection select2-selection--single" role="combobox" aria-haspopup="true"
+                            aria-expanded="false" tabindex="0" aria-labelledby="select2-discountttch-container"><span
+                                class="select2-selection__rendered" id="select2-discountttch-container"
+                                title="Percent(%)"><span class="select2-selection__clear">×</span>Percent(%)</span><span
+                                class="select2-selection__arrow" role="presentation"><b
+                                    role="presentation"></b></span></span></span><span class="dropdown-wrapper"
+                        aria-hidden="true"></span></span>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="form-group">
+                <label for="discount" class="col-form-label pb-2">Discount (<span id="chty">%</span>)</label>
+                <input type="hidden" id="discounttype" value="1">
+                <input type="hidden" id="ordertotal" value="17.25">
+                <input type="hidden" id="orderdue" value="17.25">
+                <input type="number" class="form-control" id="discount" name="discount" value="0.000" placeholder="0">
+                <input type="hidden" id="grandtotal" name="grandtotal" value="17.25">
+                <input type="hidden" id="granddiscount" name="granddiscount" value="0">
+                <input type="hidden" id="isredeempoint" name="isredeempoint" value="">
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="form-group" style="padding-top:28px">
+                <button type="button" id="paymentnow" class="btn btn-success w-md m-b-5">Payment</button>
+            </div>
+        </div>
+    </div>
+    <div id="adddiscount" class="">
+        <div class="row no-gutters">
+            <div class="form-group col-md-6">
+                <label for="payments" class="col-form-label pb-2">Payment Method</label>
+                <select name="paytype[]"
+                    class="card_typesl postform resizeselect form-control  select2-hidden-accessible"
+                    onchange="showhidecard(this)" tabindex="-1" aria-hidden="true">
+                    <option value="">Select Method</option>
+                    <option value="1">Card Payment</option>
+                    <option value="2">2Checkout</option>
+                    <option value="3">Paypal</option>
+                    <option value="4" selected="selected">Cash Payments</option>
+                    <option value="5">SSL Commerz</option>
+                    <option value="6">Monthly Account</option>
+                    <option value="8">Square Payments</option>
+                    <option value="9">Stripe Payment</option>
+                    <option value="10">Paystack Payments</option>
+                    <option value="11">Paytm Payments</option>
+                    <option value="12">Nakit Ödeme</option>
+                    <option value="17">razorpay</option>
+                </select><span class="select2 select2-container select2-container--default select2-container--below"
+                    dir="ltr" style="width: 100px;"><span class="selection"><span
+                            class="select2-selection select2-selection--single" role="combobox" aria-haspopup="true"
+                            aria-expanded="false" tabindex="0" aria-labelledby="select2-paytype-yt-container"><span
+                                class="select2-selection__rendered" id="select2-paytype-yt-container"
+                                title="Card Payment"><span class="select2-selection__clear">×</span>Card
+                                Payment</span><span class="select2-selection__arrow" role="presentation"><b
+                                    role="presentation"></b></span></span></span><span class="dropdown-wrapper"
+                        aria-hidden="true"></span></span>
+            </div>
+            <div class="form-group col-md-6">
+                <label for="4digit" class="col-form-label pb-2">Customer Payment</label>
+                <input type="number" id="paidamount_marge" class="form-control number pay firstpay" name="paidamount[]"
+                    value="17.25" onkeyup="changedueamount()" placeholder="0" onclick="givefocus(this)">
+            </div>
+        </div>
+        <div class="row no-gutters">
+            <div class="cardarea w-100 no-gutters">
+                <div class="form-group col-md-6">
+                    <label for="card_terminal" class="col-form-label">Card Terminal</label>
+                    <select name="card_terminal[]" class="postform resizeselect form-control select2-hidden-accessible"
+                        tabindex="-1" aria-hidden="true">
+                        <option value="" selected="selected">Select Card Terminal</option>
+                        <option value="1">Nexus Terminal</option>
+                        <option value="2">Brac Bank Terminal</option>
+                        <option value="3">Visa-Master Terminal</option>
+                        <option value="4">master</option>
+                        <option value="5">New</option>
+                    </select><span class="select2 select2-container select2-container--default" dir="ltr"
+                        style="width: 100px;">
+                        <span class="selection"><span class="select2-selection select2-selection--single"
+                                role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="0"
+                                aria-labelledby="select2-card_terminal-k8-container"><span
+                                    class="select2-selection__rendered" id="select2-card_terminal-k8-container"><span
+                                        class="select2-selection__placeholder">Select option</span></span><span
+                                    class="select2-selection__arrow" role="presentation"><b
+                                        role="presentation"></b></span></span></span><span class="dropdown-wrapper"
+                            aria-hidden="true"></span></span>
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="bank" class="col-form-label">Select Bank</label>
+                    <select name="bank[]" class="postform resizeselect form-control select2-hidden-accessible"
+                        tabindex="-1" aria-hidden="true">
+                        <option value="" selected="selected">Select Bank</option>
+                        <option value="1">Dutch-Bangla Bank</option>
+                        <option value="2">City Bank</option>
+                        <option value="3">Brac Bank</option>
+                        <option value="4">axis Bank</option>
+                    </select><span class="select2 select2-container select2-container--default" dir="ltr"
+                        style="width: 100px;"><span class="selection"><span
+                                class="select2-selection select2-selection--single" role="combobox" aria-haspopup="true"
+                                aria-expanded="false" tabindex="0" aria-labelledby="select2-bank-dl-container"><span
+                                    class="select2-selection__rendered" id="select2-bank-dl-container"><span
+                                        class="select2-selection__placeholder">Select option</span></span><span
+                                    class="select2-selection__arrow" role="presentation"><b
+                                        role="presentation"></b></span></span></span><span class="dropdown-wrapper"
+                            aria-hidden="true"></span></span>
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="4digit" class="col-form-label">Last 4 Digit</label>
+                    <input type="text" class="form-control" name="last4digit[]" value="">
+                </div>
+            </div>
+        </div>
+        <div class="row col-md-12 m-0" id="add_new_payment">
+        </div>
+        <div class="form-group text-right">
+            <div class="col-sm-12 pr-0">
+                <button type="button" id="add_new_payment_type" class="btn btn-success w-md m-b-5">Add New Payment
+                    Method</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="row col-md-12 m-0" id="add_new_payment">
+    <div class="row no-gutters">
+        <button type="button" class="close close_div col-md-12 text-right" aria-label="Close">
+            <span aria-hidden="true">×</span>
+        </button>
+        <div class="row no-gutters">
+            <div class="form-group col-md-6">
+                <label for="payments" class="col-form-label pb-2">Payment Method</label>
+                <select name="paytype[]"
+                    class="card_typesl postform resizeselect form-control  select2-hidden-accessible"
+                    onchange="showhidecard(this)" tabindex="-1" aria-hidden="true">
+                    <option value="" selected="selected">Select Method</option>
+                    <option value="1">Card Payment</option>
+                    <option value="2">2Checkout</option>
+                    <option value="3">Paypal</option>
+                    <option value="4">Cash Payments</option>
+                    <option value="5">SSL Commerz</option>
+                    <option value="6">Monthly Account</option>
+                    <option value="8">Square Payments</option>
+                    <option value="9">Stripe Payment</option>
+                    <option value="10">Paystack Payments</option>
+                    <option value="11">Paytm Payments</option>
+                    <option value="12">Nakit Ödeme</option>
+                    <option value="17">razorpay</option>
+                </select><span class="select2 select2-container select2-container--default" dir="ltr"
+                    style="width: 259px;"><span class="selection"><span
+                            class="select2-selection select2-selection--single" role="combobox" aria-haspopup="true"
+                            aria-expanded="false" tabindex="0" aria-labelledby="select2-paytype-dy-container"><span
+                                class="select2-selection__rendered" id="select2-paytype-dy-container"><span
+                                    class="select2-selection__placeholder">Select option</span></span><span
+                                class="select2-selection__arrow" role="presentation"><b
+                                    role="presentation"></b></span></span></span><span class="dropdown-wrapper"
+                        aria-hidden="true"></span></span>
+            </div>
+            <div class="form-group col-md-6">
+                <label for="4digit" class="col-form-label pb-2">Customer Payment</label>
+                <input type="number" class="form-control number pay" id="paidamount_marge" name="paidamount[]" value="0"
+                    placeholder="0" onkeyup="changedueamount()" onfocus="givefocus(this)">
+            </div>
+        </div>
+        <div class="row no-gutters">
+            <div class="cardarea wpr_100 display-none">
+                <div class="form-group col-md-6">
+                    <label for="card_terminal" class="col-form-label">Card Terminal</label>
+                    <select name="card_terminal[]" class="postform resizeselect form-control select2-hidden-accessible"
+                        tabindex="-1" aria-hidden="true">
+                        <option value="" selected="selected">Select Card Terminal</option>
+                        <option value="1">Nexus Terminal</option>
+                        <option value="2">Brac Bank Terminal</option>
+                        <option value="3">Visa-Master Terminal</option>
+                        <option value="4">master</option>
+                        <option value="5">New</option>
+                    </select><span class="select2 select2-container select2-container--default" dir="ltr"
+                        style="width: 100px;"><span class="selection"><span
+                                class="select2-selection select2-selection--single" role="combobox" aria-haspopup="true"
+                                aria-expanded="false" tabindex="0"
+                                aria-labelledby="select2-card_terminal-vr-container"><span
+                                    class="select2-selection__rendered" id="select2-card_terminal-vr-container"><span
+                                        class="select2-selection__placeholder">Select option</span></span><span
+                                    class="select2-selection__arrow" role="presentation"><b
+                                        role="presentation"></b></span></span></span><span class="dropdown-wrapper"
+                            aria-hidden="true"></span></span>
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="bank" class="col-form-label">Select Bank</label>
+                    <select name="bank[]" class="postform resizeselect form-control select2-hidden-accessible"
+                        tabindex="-1" aria-hidden="true">
+                        <option value="" selected="selected">Select Bank</option>
+                        <option value="1">Dutch-Bangla Bank</option>
+                        <option value="2">City Bank</option>
+                        <option value="3">Brac Bank</option>
+                        <option value="4">axis Bank</option>
+                    </select><span class="select2 select2-container select2-container--default" dir="ltr"
+                        style="width: 100px;"><span class="selection"><span
+                                class="select2-selection select2-selection--single" role="combobox" aria-haspopup="true"
+                                aria-expanded="false" tabindex="0" aria-labelledby="select2-bank-ls-container"><span
+                                    class="select2-selection__rendered" id="select2-bank-ls-container"><span
+                                        class="select2-selection__placeholder">Select option</span></span><span
+                                    class="select2-selection__arrow" role="presentation"><b
+                                        role="presentation"></b></span></span></span><span class="dropdown-wrapper"
+                            aria-hidden="true"></span></span>
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="4digit" class="col-form-label">Last 4 Digit</label>
+                    <input type="text" class="form-control" name="last4digit[]" value="">
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            "use strict";
+            // select 2 dropdown 
+            $("select.form-control:not(.dont-select-me)").select2({
+                placeholder: "Select option",
+                allowClear: true
+            });
+        });</script>
+</div>
+
+
+<div class="row col-md-12 m-0" id="add_new_payment">
+    <div class="row no-gutters">
+        <button type="button" id="close_btn"class="close close_div col-md-12 text-right" aria-label="Close">
+            <span aria-hidden="true">×</span>
+        </button>
+        <div class="row no-gutters">
+            <div class="form-group col-md-6">
+                <label for="payments" class="col-form-label pb-2">Payment Method</label>
+                <select name="paytype[]"
+                    class="card_typesl postform resizeselect form-control  select2-hidden-accessible"
+                    onchange="showhidecard(this)" tabindex="-1" aria-hidden="true">
+                    <option value="" selected="selected">Select Method</option>
+                    <option value="1">Card Payment</option>
+                    <option value="2">2Checkout</option>
+                    <option value="3">Paypal</option>
+                    <option value="4">Cash Payments</option>
+                    <option value="5">SSL Commerz</option>
+                    <option value="6">Monthly Account</option>
+                    <option value="8">Square Payments</option>
+                    <option value="9">Stripe Payment</option>
+                    <option value="10">Paystack Payments</option>
+                    <option value="11">Paytm Payments</option>
+                    <option value="12">Nakit Ödeme</option>
+                    <option value="17">razorpay</option>
+                </select><span class="select2 select2-container select2-container--default" dir="ltr"
+                    style="width: 259px;"><span class="selection"><span
+                            class="select2-selection select2-selection--single" role="combobox" aria-haspopup="true"
+                            aria-expanded="false" tabindex="0" aria-labelledby="select2-paytype-dy-container"><span
+                                class="select2-selection__rendered" id="select2-paytype-dy-container"><span
+                                    class="select2-selection__placeholder">Select option</span></span><span
+                                class="select2-selection__arrow" role="presentation"><b
+                                    role="presentation"></b></span></span></span><span class="dropdown-wrapper"
+                        aria-hidden="true"></span></span>
+            </div>
+            <div class="form-group col-md-6">
+                <label for="4digit" class="col-form-label pb-2">Customer Payment</label>
+                <input type="number" class="form-control number pay" id="paidamount_marge" name="paidamount[]" value="0"
+                    placeholder="0" onkeyup="changedueamount()" onfocus="givefocus(this)">
+            </div>
+        </div>
+    </div>
+    

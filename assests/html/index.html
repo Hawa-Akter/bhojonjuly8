@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../css/index.css">
+</head>
+
+<body>
+
+    <div class="card-wrap d-flex justify-content-center align-items-center h-100 py-3 px-3">
+        <div class="card py-4 px-4 py-sm-5 px-sm-5 rounded-0">
+            <div class="text-center mb-5">
+                <img src="../images/loginPagelogo.png.png" class="img-fluid">
+            </div>
+            <form action="#" id="login">
+                <div class="mb-4">
+                    <label for="email" class="text-black mb-1">Email Address</label>
+                    <input type="email" id="email" name="email" class="form-control rounded-0"
+                        placeholder="example@email.com" value="test@gmail.com" tabindex="1">
+                    <label id="emptyEmail" style="color:red"></label>
+                </div>
+                <div class="mb-4">
+                    <label for="password" class="text-black mb-1">Password</label>
+                    <input type="password" id="password" name="password" class="form-control rounded-0"
+                        placeholder="*******" value="12345" tabindex="2">
+                    <label id="emptyPass" style="color: red;"></label>
+                </div>
+                <div class="text-end">
+                    <input type="submit" id="submit_btn" name="submit_btn" value="Login"
+                        class="btn btn-success login_btn px-4 rounded-0">
+                    <!-- <button type="submit">
+                        Login
+                    </button> -->
+                </div>
+            </form>
+            <p id="errorMsg" style="color: red;"></p>
+
+            <p class="mt-5 mb-0 text-center link">Powered By: BDTASK, <a href="https://www.bdtask.com/"
+                    target="_blank">www.bdtask.com</a></p>
+        </div>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+        crossorigin="anonymous"></script>
+    <script src="../js/index.js"></script>
+
+
+
+</body>
+
+</html>

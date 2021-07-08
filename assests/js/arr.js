@@ -1,0 +1,9 @@
+0: {addOnName: "souc", price: "5", addsOnquantity: "1", addOntotal: "5", foodId: "4"}
+1: {addOnName: "souc", price: "5", addsOnquantity: "2", addOntotal: "10", foodId: "4"}
+2: {addOnName: "souc", price: "5", addsOnquantity: "3", addOntotal: "15", foodId: "4"}
+3: {addOnName: "Butter", price: "10", addsOnquantity: "1", addOntotal: "10", foodId: "4"}
+4: {addOnName: "Butter", price: "10", addsOnquantity: "2", addOntotal: "20", foodId: "4"}
+5: {addOnName: "Butter", price: "10", addsOnquantity: "3", addOntotal: "30", foodId: "4"}
+6: {addOnName: "sauce", price: "50", addsOnquantity: "1", addOntotal: "50", foodId: "4"}
+7: {addOnName: "sauce", price: "50", addsOnquantity: "2", addOntotal: "100", foodId: "4"}
+8: {addOnName: "sauce", price: "50", addsOnquantity: "3", addOntotal: "150", foodId: "4"}

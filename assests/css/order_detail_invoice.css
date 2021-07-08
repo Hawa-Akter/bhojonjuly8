@@ -1,0 +1,63 @@
+body {
+  font-size: 12px;
+}
+.order_details {
+  margin-top: 10px;
+}
+.company_settings {
+  margin-top: 0;
+  margin-bottom: 0.1rem;
+}
+#setting_title {
+  font-weight: bold;
+}
+#billingFromId {
+  display: block;
+  margin-top: 2rem;
+  margin-bottom: 0.4rem;
+  color: #45c203;
+  border: 2px solid #45c203;
+  font-size: 10px;
+  font-weight: bold;
+  width: 99px;
+}
+.invoice_info {
+  margin-top: 0;
+  margin-bottom: 0.1rem;
+}
+#billingToId {
+  display: block;
+  margin-top: 2rem;
+  margin-bottom: 0.4rem;
+  color: #45c203;
+  border: 2px solid #45c203;
+  font-size: 10px;
+  font-weight: bold;
+  width: 99px;
+}
+.billing_to {
+  margin-top: 0;
+  margin-bottom: 0.1rem;
+}
+
+.orderItemTable {
+  margin-top: 20px;
+}
+.order_details_footer {
+  position: fixed;
+  bottom: 10px;
+  left: 0;
+  right: 0;
+  padding: 0 15px;
+}
+#sig-canvas {
+  border: 2px dotted #cccccc;
+  border-radius: 15px;
+  cursor: crosshair;
+  height: 85px;
+  width: 185px;
+}
+#sig-submitBtn {
+  height: 36px;
+  width: 74px;
+}
